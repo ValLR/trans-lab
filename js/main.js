@@ -28,7 +28,7 @@ $(document).ready(function(){
     })
  	//llamada de api para tarifa.html
     $("#calcular").on("click",function(){
-    	var id = $("#one").val();
+    	var id = $("#select-tarjetas").val();
     	var selected = $("#select-tarifa").val();
     	$.ajax({
 			url:'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip='+id+'',
@@ -44,8 +44,33 @@ $(document).ready(function(){
 				var saldoNum = parseInt(saldoReal);
 				if(selected === "1"){
 					var tarifa = 640;
+					var final = parseInt(saldoNum) - parseInt(tarifa)
 					console.log("costo pasaje: "+tarifa);
-					console.log("SALDO FINAL:"+ saldoNum - tarifa);
+					console.log("SALDO FINAL:"+ final);
+					$("#printTarifa").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>COSTO PASAJE</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+tarifa+`</h2>
+								</div>
+							</row>
+						</div>
+						`)
+					$("#printSaldoFinal").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>SALDO FINAL</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+final+`</h2>
+								</div>
+							</row>
+						</div>
+						`)
 				}
 				else if(selected === "2"){
 					var tarifa = 680;
@@ -57,7 +82,31 @@ $(document).ready(function(){
 					var tarifa = 740;
 					var final = parseInt(saldoNum) - parseInt(tarifa)
 					console.log("costo pasaje: "+tarifa);
-					console.log("SALDO FINAL:"+ final);										
+					console.log("SALDO FINAL:"+ final);
+					$("#printTarifa").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>COSTO PASAJE</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+tarifa+`</h2>
+								</div>
+							</row>
+						</div>
+						`)
+					$("#printSaldoFinal").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>SALDO FINAL</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+final+`</h2>
+								</div>
+							</row>
+						</div>
+						`)								
 				}
 
 			}
@@ -66,18 +115,88 @@ $(document).ready(function(){
 					var final = parseInt(saldo)-parseInt(tarifa)
 					console.log("costo pasaje: "+tarifa);
 					console.log("SALDO FINAL:"+ final);
+					$("#printTarifa").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>COSTO PASAJE</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+tarifa+`</h2>
+								</div>
+							</row>
+						</div>
+						`)
+					$("#printSaldoFinal").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>SALDO FINAL</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+final+`</h2>
+								</div>
+							</row>
+						</div>
+						`)
 			}
 			else if(selected === "2"){
 					var tarifa = 680
 					var final = parseInt(saldo)-parseInt(tarifa)
 					console.log("costo pasaje: "+tarifa);
-					console.log("SALDO FINAL:"+ final);				
+					console.log("SALDO FINAL:"+ final);	
+					$("#printTarifa").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>COSTO PASAJE</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+tarifa+`</h2>
+								</div>
+							</row>
+						</div>
+						`)
+					$("#printSaldoFinal").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>SALDO FINAL</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+final+`</h2>
+								</div>
+							</row>
+						</div>
+						`)			
 			}
 			else if(selected ==="3"){
 					var tarifa = 740
 					var final = parseInt(saldo)-parseInt(tarifa)
 					console.log("costo pasaje: "+tarifa);
-					console.log("SALDO FINAL:"+ final);								
+					console.log("SALDO FINAL:"+ final);
+					$("#printTarifa").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>COSTO PASAJE</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+tarifa+`</h2>
+								</div>
+							</row>
+						</div>
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>SALDO FINAL</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+final+`</h2>
+								</div>
+							</row>
+						</div>
+						`)						
 			}
 		})
     });
