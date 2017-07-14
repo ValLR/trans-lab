@@ -29,14 +29,56 @@ $(document).ready(function(){
  	//llamada de api para tarifa.html
     $("#calcular").on("click",function(){
     	var id = $("#one").val();
-    	var alta = 
+    	var selected = $("#select-tarifa").val();
     	$.ajax({
 			url:'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip='+id+'',
 			type: 'GET',
 			datatype: 'json',
 		})
 		.done(function(response){
+			console.log(response.saldoTarjeta);
+			var saldo = (response.saldoTarjeta).substring(1);
+			console.log(saldo)
+			if(!(saldo.indexOf('.') == -1)){
+				var saldoReal= saldo.replace('.','');
+				var saldoNum = parseInt(saldoReal);
+				if(selected === "1"){
+					var tarifa = 640;
+					console.log("costo pasaje: "+tarifa);
+					console.log("SALDO FINAL:"+ saldoNum - tarifa);
+				}
+				else if(selected === "2"){
+					var tarifa = 680;
+					var final = parseInt(saldoNum) - parseInt(tarifa)
+					console.log("costo pasaje: "+tarifa);
+					console.log("SALDO FINAL:"+ final);										
+				}
+				else if(selected === "3"){
+					var tarifa = 740;
+					var final = parseInt(saldoNum) - parseInt(tarifa)
+					console.log("costo pasaje: "+tarifa);
+					console.log("SALDO FINAL:"+ final);										
+				}
 
+			}
+			else if(selected === "1"){
+					var tarifa = 640
+					var final = parseInt(saldo)-parseInt(tarifa)
+					console.log("costo pasaje: "+tarifa);
+					console.log("SALDO FINAL:"+ final);
+			}
+			else if(selected === "2"){
+					var tarifa = 680
+					var final = parseInt(saldo)-parseInt(tarifa)
+					console.log("costo pasaje: "+tarifa);
+					console.log("SALDO FINAL:"+ final);				
+			}
+			else if(selected ==="3"){
+					var tarifa = 740
+					var final = parseInt(saldo)-parseInt(tarifa)
+					console.log("costo pasaje: "+tarifa);
+					console.log("SALDO FINAL:"+ final);								
+			}
 		})
     });
 
