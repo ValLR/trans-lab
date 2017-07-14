@@ -1,25 +1,47 @@
 body{
 	background-color: #3C3C3E;
 	color:white;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+h3{
+	color:#ECA100;
+	font-family: 'Monoton', cursive;
+
 }
 img{
-	margin-top:30px;
 	width:50%;
 	height:50%;
 }
+
+.img{
+	margin-top:30px;
+	margin-bottom:20px;
+}
+.row.ppal{
+	margin-bottom: 0;
+}
 .container-index{
 	padding: 10px 20px;
+	font-weight: normal;
 }
 .input-field{
-	background-color: white
+	background-color: white;
+	color:black;
 }
-button{
-	background-color: ;#ECA100;
+#logIn{
+	background-color: #ECA100;
 	color:white;
+	font-weight: bold;
+	padding-bottom:30px;
+	margin-bottom: 10px;
 }
 #registrate{
-	background-color: ;#ECA100;
+	color: #ECA100;
 }
 i{
 	color: black;
+}
+a{
+	color: white;
 }
