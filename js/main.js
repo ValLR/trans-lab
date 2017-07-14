@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     		$("#correoForm").text("Debes ingresar un correo válido");
     	}
-    	else if(($("#password").val()).length >= 8){
+    	else if(($("#password").val()).length >= 8 || ($("#password").val()) === ""){
     		$("#passwordForm").text("Tu contraseña no debe superar los 8 caracteres")
     	}
     	else{
