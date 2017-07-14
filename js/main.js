@@ -20,6 +20,8 @@ $(document).ready(function(){
     if($("#email").val() === !undefined){
     	$("#email-p").attr("value", localStorage.getItem('email'));
     }
+    //agregando tarjetas
+    $("#addCard").on(cl)
 
     //poniendo mi numero de bip en select de tarifa
     $(document).on("click",function(){
@@ -70,13 +72,38 @@ $(document).ready(function(){
 								</div>
 							</row>
 						</div>
-						`)
+						`)								
 				}
+
 				else if(selected === "2"){
 					var tarifa = 680;
 					var final = parseInt(saldoNum) - parseInt(tarifa)
 					console.log("costo pasaje: "+tarifa);
-					console.log("SALDO FINAL:"+ final);										
+					console.log("SALDO FINAL:"+ final);		
+					$("#printTarifa").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>COSTO PASAJE</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+tarifa+`</h2>
+								</div>
+							</row>
+						</div>
+						`)
+					$("#printSaldoFinal").append(`
+						<div class = "row">
+							<div class = "col s12 header">
+								<p>SALDO FINAL</p>
+							</div>
+							<div class = "row">
+								<div class= "col s12 printedSaldo">
+									<h2>`+final+`</h2>
+								</div>
+							</row>
+						</div>
+						`)																
 				}
 				else if(selected === "3"){
 					var tarifa = 740;
