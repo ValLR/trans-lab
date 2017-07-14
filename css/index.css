@@ -1,0 +1,22 @@
+body{
+	background-color: #3C3C3E;
+	color:white;
+}
+img{
+	margin-top:30px;
+	width:50%;
+	height:50%;
+}
+.container-index{
+	padding: 10px 20px;
+}
+.input-field{
+	background-color: white
+}
+button{
+	background-color: ;#ECA100;
+	color:white;
+}
+#registrate{
+	background-color: ;#ECA100;
+}
