@@ -21,22 +21,53 @@ $(document).ready(function(){
     	$("#email-p").attr("value", localStorage.getItem('email'));
     }
 
+    //poniendo mi numero de bip en select de tarifa
+    $(document).on("click",function(){
+   		$("#one").text($("#nTarjetaTarifa").val());
+   		$("#one").attr("value",($("#nTarjetaTarifa").val()));
+    })
+ 	//llamada de api para tarifa.html
+    $("#calcular").on("click",function(){
+    	var id = $("#one").val();
+    	var alta = 
+    	$.ajax({
+			url:'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip='+id+'',
+			type: 'GET',
+			datatype: 'json',
+		})
+		.done(function(response){
 
-   //llamada de api
+		})
+    });
+
+   //llamada de api para saldo.html
    $("#saldo").on("click", function(){
    	var id = ($("#nTarjetaSaldo").val());
-			$.ajax({
-				url:'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip='+id+'',
-				type: 'GET',
-				datatype: 'json',
-			})
-			.done(function(response){
-				console.log(response.saldoTarjeta);
+		$.ajax({
+			url:'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip='+id+'',
+			type: 'GET',
+			datatype: 'json',
+		})
+		.done(function(response){
+			console.log(response.saldoTarjeta);
+			$("#printSaldo").append(`
+				<div class = "row">
+					<div class = "col s12 header">
+						<p>SALDO TOTAL</p>
+					</div>
+					<div class = "row">
+						<div class= "col s12 printedSaldo">
+							<h2>`+response.saldoTarjeta+`</h2>
+						</div>
+					</row>
+				</div>
 
-			})
-			.fail(function(){
-				console.log("error");
-			});
+
+				`)
+		})
+		.fail(function(){
+			console.log("error");
+		});
 		
 
    });
