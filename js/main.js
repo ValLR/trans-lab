@@ -21,7 +21,17 @@ $(document).ready(function(){
     	$("#email-p").attr("value", localStorage.getItem('email'));
     }
     //agregando tarjetas
-    $("#addCard").on(cl)
+    $("#addCard").on("click", function(){
+    	var card = $("#nTarjeta").val();
+    	$("#card-container").append(`
+			<div class= "row">
+				<div class = "col s12">
+					<p>`+ card +`</p>
+				</div>
+			</row>
+    		`)
+    	$("#nTarjeta").val("");
+    });
 
     //poniendo mi numero de bip en select de tarifa
     $(document).on("click",function(){
