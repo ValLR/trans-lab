@@ -66,7 +66,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+tarifa+`</h2>
+									<h2>$`+tarifa+`</h2>
 								</div>
 							</row>
 						</div>
@@ -78,7 +78,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+final+`</h2>
+									<h2>$`+final+`</h2>
 								</div>
 							</row>
 						</div>
@@ -97,7 +97,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+tarifa+`</h2>
+									<h2>$`+tarifa+`</h2>
 								</div>
 							</row>
 						</div>
@@ -109,7 +109,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+final+`</h2>
+									<h2>$`+final+`</h2>
 								</div>
 							</row>
 						</div>
@@ -123,11 +123,11 @@ $(document).ready(function(){
 					$("#printTarifa").append(`
 						<div class = "row">
 							<div class = "col s12 header">
-								<p>COSTO PASAJE</p>
+								<p>$COSTO PASAJE</p>
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+tarifa+`</h2>
+									<h2>$`+tarifa+`</h2>
 								</div>
 							</row>
 						</div>
@@ -139,7 +139,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+final+`</h2>
+									<h2>$`+final+`</h2>
 								</div>
 							</row>
 						</div>
@@ -159,7 +159,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+tarifa+`</h2>
+									<h2>$`+tarifa+`</h2>
 								</div>
 							</row>
 						</div>
@@ -171,7 +171,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+final+`</h2>
+									<h2>$`+final+`</h2>
 								</div>
 							</row>
 						</div>
@@ -189,7 +189,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+tarifa+`</h2>
+									<h2>$`+tarifa+`</h2>
 								</div>
 							</row>
 						</div>
@@ -201,7 +201,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+final+`</h2>
+									<h2>$`+final+`</h2>
 								</div>
 							</row>
 						</div>
@@ -219,7 +219,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+tarifa+`</h2>
+									<h2>$`+tarifa+`</h2>
 								</div>
 							</row>
 						</div>
@@ -229,7 +229,7 @@ $(document).ready(function(){
 							</div>
 							<div class = "row">
 								<div class= "col s12 printedSaldo">
-									<h2>`+final+`</h2>
+									<h2>$`+final+`</h2>
 								</div>
 							</row>
 						</div>

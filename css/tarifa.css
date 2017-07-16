@@ -1,0 +1,25 @@
+body{
+	background-color:#D4D5D7;
+}
+#calcular{
+	background-color: #ECA100;
+}
+#nTarjetaTarifa::placeholder{
+	color:grey;
+}
+input{
+	font-size:10px;
+}
+.printedSaldo{
+	background-color: #ECA100;
+	font-weight: bolder;
+	color:white;
+}
+.header{
+	background-color: #3C3C3E;
+	font-weight:bold;
+	color:white;
+}
+.resultado{
+	width:100%
+}
