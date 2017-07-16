@@ -262,7 +262,9 @@ $(document).ready(function(){
 
 
 				`)
+		$("#nTarjetaSaldo").val("");
 		})
+
 		.fail(function(){
 			console.log("error");
 		});
