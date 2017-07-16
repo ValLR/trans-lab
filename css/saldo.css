@@ -1,0 +1,26 @@
+body{
+	background-color:#D4D5D7;
+}
+.container.body{
+	padding: 15px 20px;
+}
+#nTarjetaSaldo{
+	margin-top: 30px;
+}
+#nTarjetaSaldo::placeholder{
+	color:grey;
+}
+#saldo{
+	background-color: #ECA100;
+}
+.header{
+	background-color: #3C3C3E;
+	color:white;
+}
+.printedSaldo{
+	color:white;
+	background-color: #ECA100;
+}
+.resultado{
+	width:100%;
+}
