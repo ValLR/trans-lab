@@ -25,7 +25,7 @@ $(document).ready(function(){
     	var card = $("#nTarjeta").val();
     	$("#card-container").append(`
 			<div class= "row">
-				<div class = "col s12">
+				<div class = "col s12 cardv">
 					<p>`+ card +`</p>
 				</div>
 			</row>

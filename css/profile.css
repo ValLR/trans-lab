@@ -1,0 +1,39 @@
+body{
+	background-color: #D4D5D7;
+}
+img{
+	width:180px;
+}
+.img-container{
+	background-color: #ECA100;
+	width:100%;
+	padding: 30px 10px;
+}
+.container-email{
+	padding: 20px 10px 0 10px;
+}
+.nTarjeta-container{
+	padding:20px 20px;
+}
+#email-p{
+	font-weight: bold;
+	background-color:white;
+	border:1px solid white;
+}
+input::placeholder{
+	color:grey;
+}
+.container-add{
+	padding:0 25px;
+}
+#addCard{
+	background-color:#ECA100;
+}
+#card-container{
+	padding:10px 30px;
+}
+.cardv{
+	background-color: white;
+	height: 20px;
+	font-weight: bold;
+}
